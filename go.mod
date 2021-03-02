@@ -1,4 +1,4 @@
-module epat-outputter
+module github.com/mganta/epat-outputter
 
 go 1.14
 
