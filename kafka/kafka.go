@@ -9,12 +9,12 @@ import (
 	"strconv"
 )
 
-type kafkaHolder struct {
+type KafkaHolder struct {
 	writer      *kafka.Writer
 	initialized bool
 }
 
-func (k *kafkaHolder) InitWriter(endpoint string, topic string) error {
+func (k *KafkaHolder) InitWriter(endpoint string, topic string) error {
 	k.writer = &kafka.Writer{
 		Addr:     kafka.TCP(endpoint),
 		Topic:    topic,
@@ -24,7 +24,7 @@ func (k *kafkaHolder) InitWriter(endpoint string, topic string) error {
 	return nil
 }
 
-func (k *kafkaHolder) Write(messagesBatch []string) error {
+func (k *KafkaHolder) Write(messagesBatch []string) error {
 	var messages []kafka.Message
 
 	for i := 0; i < len(messagesBatch); i++ {
@@ -46,7 +46,7 @@ func (k *kafkaHolder) Write(messagesBatch []string) error {
 	return nil
 }
 
-func (k *kafkaHolder) Close() error {
+func (k *KafkaHolder) Close() error {
 	k.initialized = false
 	k.writer = nil
 	err := k.writer.Close()
