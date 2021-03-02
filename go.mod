@@ -1,4 +1,4 @@
-module epat-kafka
+module epat-outputter
 
 go 1.14
 
