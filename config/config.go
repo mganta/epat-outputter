@@ -9,8 +9,8 @@ type Config struct {
 	Dependencies string `json:"dependencies,omitempty" yaml:"dependencies,omitempty"`
 
     OutputOption OutputOption `json:"outputOption,omitempty" yaml:"outputOption,omitempty"`
-    PayLoad string `json:"payLoad,omitempty" yaml:"payLoad,omitempty"`
-	PluginParams map[string]string `json:"pluginParams,omitempty" yaml:"pluginParams,omitempty"`
+   PluginRuntimeParams map[string]string `json:"payLoad,omitempty" yaml:"payLoad,omitempty"`
+	PluginConfigParams map[string]string `json:"pluginParams,omitempty" yaml:"pluginParams,omitempty"`
 }
 
 type OutputOption struct {
