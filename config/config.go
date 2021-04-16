@@ -1,16 +1,8 @@
 package config
 
 type Config struct {
-	PluginName string `json:"pluginName,omitempty" yaml:"pluginName,omitempty"`
-	DeploymentName string `json:"deploymentName,omitempty" yaml:"deploymentName,omitempty"`
-	RunTime string `json:"runTime,omitempty" yaml:"runTime,omitempty"`
-	Handler string `json:"handler,omitempty" yaml:"handler,omitempty"`
-	FromFile string `json:"fromFile,omitempty" yaml:"fromFile,omitempty"`
-	Dependencies string `json:"dependencies,omitempty" yaml:"dependencies,omitempty"`
-
     OutputOption OutputOption `json:"outputOption,omitempty" yaml:"outputOption,omitempty"`
-	PluginRuntimeParams map[string]interface{} `json:"pluginRuntimeParams,omitempty" yaml:"pluginRuntimeParams,omitempty"`
-	PluginConfigParams map[string]interface{} `json:"pluginConfigParams,omitempty" yaml:"pluginConfigParams,omitempty"`
+	PluginParams map[string]interface{} `json:"pluginRuntimeParams,omitempty" yaml:"pluginRuntimeParams,omitempty"`
 }
 
 type OutputOption struct {
